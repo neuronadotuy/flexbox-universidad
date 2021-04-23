@@ -1,0 +1,52 @@
+/**
+ * /* Botones
+ *
+ * @format
+ */
+
+@mixin boton($color) {
+  background-color: $color;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $blanco;
+}
+
+@mixin box-sizing($box-model) {
+  box-sizing: $box-model;
+}
+
+@mixin background-image($imagen) {
+  background-image: url($imagen);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin gradiant($color1, $color2) {
+  background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+
+@mixin telefono {
+  @media only screen and (min-width: $telefono) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin text-hover($color) {
+  transition: 0.5s;
+  color: darken($color: $color, $amount: 10%);
+}
